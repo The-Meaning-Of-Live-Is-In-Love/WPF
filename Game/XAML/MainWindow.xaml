@@ -18,6 +18,7 @@
     <Canvas Height = "0" Width = "0">
         <Ellipse Name = "Player_Light_1" Width = "30" Height = "30" Fill = "LightGray" Canvas.Left = "0" Canvas.Top = "0" Margin = "-100000"/>
         <Ellipse Name = "Player_Light_2" Width = "20" Height = "20" Fill = "White" Canvas.Left = "0" Canvas.Top = "0" Margin = "-100000"/>
+        <Ellipse Name = "Score_Point" Width = "5" Height = "5" Fill = "Lime" Canvas.Left = "0" Canvas.Top = "100" Margin = "-100000" Opacity = "0.0"/>
         <Ellipse Name = "Player" Width = "10" Height = "10" Fill = "black" Canvas.Left = "0" Canvas.Top = "0" Margin = "-100000"/>
     </Canvas>
 </Window>

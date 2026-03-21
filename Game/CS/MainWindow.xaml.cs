@@ -31,6 +31,7 @@ namespace Game
                 Canvas.SetTop(Player, Shift_Position_Y);
                 Canvas.SetTop(Player_Light_1, Shift_Position_Y);
                 Canvas.SetTop(Player_Light_2, Shift_Position_Y);
+                Checking_Position(Shift_Position_X, Shift_Position_Y);
             }
             if (Key_Pressed.Key == Key.W)
             {
@@ -38,6 +39,7 @@ namespace Game
                 Canvas.SetTop(Player, Shift_Position_Y);
                 Canvas.SetTop(Player_Light_1, Shift_Position_Y);
                 Canvas.SetTop(Player_Light_2, Shift_Position_Y);
+                Checking_Position(Shift_Position_X, Shift_Position_Y);
             }
             if (Key_Pressed.Key == Key.D)
             {
@@ -45,6 +47,7 @@ namespace Game
                 Canvas.SetLeft(Player, Shift_Position_X);
                 Canvas.SetLeft(Player_Light_1, Shift_Position_X);
                 Canvas.SetLeft(Player_Light_2, Shift_Position_X);
+                Checking_Position(Shift_Position_X, Shift_Position_Y);
             }
             if (Key_Pressed.Key == Key.A)
             {
@@ -52,6 +55,18 @@ namespace Game
                 Canvas.SetLeft(Player, Shift_Position_X);
                 Canvas.SetLeft(Player_Light_1, Shift_Position_X);
                 Canvas.SetLeft(Player_Light_2, Shift_Position_X);
+                Checking_Position(Shift_Position_X, Shift_Position_Y);
+            }
+        }
+        private void Checking_Position(int Shift_Position_X, int Shift_Position_Y)
+        {
+            if ((Shift_Position_X > -15) && (Shift_Position_X < 15) && (Shift_Position_Y > 85) && (Shift_Position_Y < 115))
+            {
+                Score_Point.Opacity = 1;
+            }
+            else
+            {
+                Score_Point.Opacity = 0;
             }
         }
     }
