@@ -1,0 +1,13 @@
+﻿<Window x:Class = "InputOutputApplication.MainWindow"
+    xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local = "clr-namespace:InputOutputApplication"
+    mc:Ignorable = "d"
+    Title = "Input Output Application" Height = "1080" Width = "1920">
+    <StackPanel>
+        <TextBox x:Name = "Information_Message_Box" />
+        <TextBlock x:Name = "Information_Message_Block" Text = "{Binding ElementName = Information_Message_Box, Path = Text}" />
+    </StackPanel>
+</Window>
