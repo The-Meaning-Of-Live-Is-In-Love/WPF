@@ -34,7 +34,7 @@ namespace Game
         }
         private void Movement(object sender, KeyEventArgs Key_Pressed)
         {
-            if (Key_Pressed.Key == Key.S)
+            if (Key_Pressed.Key == Key.S || Key_Pressed.Key == Key.Down)
             {
                 Shift_Position_Y += 1;
                 Canvas.SetTop(Player, Shift_Position_Y);
@@ -42,7 +42,7 @@ namespace Game
                 Canvas.SetTop(Player_Light_2, Shift_Position_Y);
                 Checking_Position(Shift_Position_X, Shift_Position_Y);
             }
-            if (Key_Pressed.Key == Key.W)
+            if (Key_Pressed.Key == Key.W || Key_Pressed.Key == Key.Up)
             {
                 Shift_Position_Y -= 1;
                 Canvas.SetTop(Player, Shift_Position_Y);
@@ -50,7 +50,7 @@ namespace Game
                 Canvas.SetTop(Player_Light_2, Shift_Position_Y);
                 Checking_Position(Shift_Position_X, Shift_Position_Y);
             }
-            if (Key_Pressed.Key == Key.D)
+            if (Key_Pressed.Key == Key.D || Key_Pressed.Key == Key.Right)
             {
                 Shift_Position_X += 1;
                 Canvas.SetLeft(Player, Shift_Position_X);
@@ -58,7 +58,7 @@ namespace Game
                 Canvas.SetLeft(Player_Light_2, Shift_Position_X);
                 Checking_Position(Shift_Position_X, Shift_Position_Y);
             }
-            if (Key_Pressed.Key == Key.A)
+            if (Key_Pressed.Key == Key.A || Key_Pressed.Key == Key.Left)
             {
                 Shift_Position_X -= 1;
                 Canvas.SetLeft(Player, Shift_Position_X);
