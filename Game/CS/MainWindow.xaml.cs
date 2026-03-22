@@ -20,11 +20,17 @@ namespace Game
         public MainWindow()
         {
             InitializeComponent();
+            Update_Score_TextBlock(Score);
         }
+        int Score;
         int Shift_Position_X;
         int Shift_Position_Y;
         int Score_Point_Shift_Position_X = 0;
         int Score_Point_Shift_Position_Y = 0;
+        void Update_Score_TextBlock(int Score)
+        {
+            Score_TextBlock.Text = "Score " + Score.ToString();
+        }
         private void Generation_Random_Position()
         {
             Random Random_Value_1 = new Random();
@@ -83,6 +89,8 @@ namespace Game
                 Canvas.SetLeft(Score_Point, Score_Point_Shift_Position_X);
                 Canvas.SetTop(Score_Point, Score_Point_Shift_Position_Y);
                 Score_Point.Opacity = 0;
+                Score += 5;
+                Update_Score_TextBlock(Score);
             }
         }
     }

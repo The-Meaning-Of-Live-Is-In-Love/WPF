@@ -6,7 +6,8 @@
     xmlns:local = "clr-namespace:Game"
     mc:Ignorable = "d"
     KeyDown = "Movement"
-    Title = "Game" Height = "1080" Width = "1920">
+    Title = "Game" Height = "1080" Width = "1920"
+    WindowState = "Maximized">
     <Window.Resources>
         <SolidColorBrush x:Key = "WindowBrush" Color = "Black"/>
     </Window.Resources>
@@ -20,5 +21,6 @@
         <Ellipse Name = "Player_Light_2" Width = "20" Height = "20" Fill = "White" Canvas.Left = "0" Canvas.Top = "0" Margin = "-100000"/>
         <Ellipse Name = "Score_Point" Width = "5" Height = "5" Fill = "Lime" Canvas.Left = "0" Canvas.Top = "0" Margin = "-100000" Opacity = "0.0"/>
         <Ellipse Name = "Player" Width = "10" Height = "10" Fill = "black" Canvas.Left = "0" Canvas.Top = "0" Margin = "-100000"/>
+        <TextBlock FontSize = "20" Name = "Score_TextBlock" Foreground = "White" Canvas.Bottom = "375" Canvas.Right = "-30"/>
     </Canvas>
 </Window>
