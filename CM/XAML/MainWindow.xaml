@@ -10,7 +10,8 @@
     Width = "1920"
     WindowState = "Maximized"
 	WindowStyle = "None"
-	ResizeMode = "NoResize">
+	ResizeMode = "NoResize"
+    Loaded = "CM_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width = "Auto"/>
@@ -29,7 +30,12 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Column = "1" Margin = "15">
-            <ListView x:Name = "Libraryes_Text" ItemsSource = "{Binding Libraryes}"/>
+            <ListView x:Name = "Libraryes_Text" ItemsSource = "{Binding}"/>
+            <ListView x:Name = "Namespace_Text" ItemsSource = "{Binding}"/>
+            <ListView x:Name = "Main_Function_1" ItemsSource = "{Binding}"/>
+            <ListView x:Name = "Main_Function_2" ItemsSource = "{Binding}"/>
+            <ListView x:Name = "Main_Function_Text" ItemsSource = "{Binding}"/>
+            <ListView x:Name = "Main_Function_3" ItemsSource = "{Binding}"/>
         </StackPanel>
         <StackPanel Grid.Column = "2" Margin = "15">
             <ListView

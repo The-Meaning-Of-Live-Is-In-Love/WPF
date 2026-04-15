@@ -17,6 +17,28 @@ namespace Code_Maker
 {
     public partial class MainWindow : Window
     {
+        private void CM_Loaded(object sender, RoutedEventArgs Key_Pressed)
+        {
+            List<string> Namespace_List = new List<string>();
+            Namespace_List.Add("using namespace std;");
+            Namespace_Text.ItemsSource = null;
+            Namespace_Text.ItemsSource = Namespace_List;
+            List<string> MainFunction1 = new List<string>();
+            MainFunction1.Add("int main()");
+            List<string> MainFunction2 = new List<string>();
+            MainFunction2.Add("{");
+            List<string> Main_Function = new List<string>();
+            List<string> MainFunction3 = new List<string>();
+            MainFunction3.Add("}");
+            Main_Function_1.ItemsSource = null;
+            Main_Function_1.ItemsSource = MainFunction1;
+            Main_Function_2.ItemsSource = null;
+            Main_Function_2.ItemsSource = MainFunction2;
+            Main_Function_Text.ItemsSource = null;
+            Main_Function_Text.ItemsSource = Main_Function;
+            Main_Function_3.ItemsSource = null;
+            Main_Function_3.ItemsSource = MainFunction3;
+        }
         string Value_Input;
         int Type_Code_Make;
         List<string> Libraryes_List = new List<string>();
