@@ -5,7 +5,7 @@
     xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local = "clr-namespace:Code_Maker"
     mc:Ignorable = "d"
-    Title = "BDCM"
+    Title = "CM"
     Height = "1080"
     Width = "1920"
     WindowState = "Maximized"
@@ -32,8 +32,8 @@
             <ListView x:Name = "Libraryes_Text" ItemsSource = "{Binding Libraryes}"/>
         </StackPanel>
         <StackPanel Grid.Column = "2" Margin = "15">
-            <ContentPresenter
-            Name = "Buttons_Values"/>
+            <ListView
+            x:Name = "Buttons_Values"/>
         </StackPanel>
         <TextBox
             VerticalAlignment = "Bottom" 
