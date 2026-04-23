@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.WebRequestMethods;
 
 namespace Game
 {
@@ -31,12 +35,12 @@ namespace Game
         {
             Score_TextBlock.Text = "Score " + Score.ToString();
         }
-        private void Generation_Random_Position()
+        public void Generation_Random_Position()
         {
             Random Random_Value_1 = new Random();
-            Score_Point_Shift_Position_X = Random_Value_1.Next(-960, 960);
+            Score_Point_Shift_Position_X = Random_Value_1.Next(-900, 900);
             Random Random_Value_2 = new Random();
-            Score_Point_Shift_Position_Y = Random_Value_2.Next(-540, 540);
+            Score_Point_Shift_Position_Y = Random_Value_2.Next(-500, 500);
         }
         private void Movement(object sender, KeyEventArgs Key_Pressed)
         {
@@ -77,21 +81,32 @@ namespace Game
         {
             if ((Shift_Position_X > Score_Point_Shift_Position_X - 15) && (Shift_Position_X < Score_Point_Shift_Position_X + 15) && (Shift_Position_Y > Score_Point_Shift_Position_Y - 15) && (Shift_Position_Y < Score_Point_Shift_Position_Y + 15))
             {
-                Score_Point.Opacity = 1;
+                Score_Point.Opacity = 1.0;
             }
             else
             {
-                Score_Point.Opacity = 0;
+                Score_Point.Opacity = 0.0;
             }
             if ((Shift_Position_X > Score_Point_Shift_Position_X - 5) && (Shift_Position_X < Score_Point_Shift_Position_X + 5) && (Shift_Position_Y > Score_Point_Shift_Position_Y - 5) && (Shift_Position_Y < Score_Point_Shift_Position_Y + 5))
             {
                 Generation_Random_Position();
                 Canvas.SetLeft(Score_Point, Score_Point_Shift_Position_X);
                 Canvas.SetTop(Score_Point, Score_Point_Shift_Position_Y);
-                Score_Point.Opacity = 0;
+                Score_Point.Opacity = 0.0;
                 Score += 5;
+                Save_Variables_Values(Score);
                 Update_Score_TextBlock(Score);
             }
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Save_Variables_Values(Score);
+        }
+        public void Save_Variables_Values(int Score)
+        {
+        }
+        public void Load_Variables_Values()
+        {
         }
     }
 }
