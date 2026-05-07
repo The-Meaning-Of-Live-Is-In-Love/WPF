@@ -1,0 +1,82 @@
+﻿<Window x:Class = "Code_Maker.MainWindow"
+    xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local = "clr-namespace:Code_Maker"
+    mc:Ignorable = "d"
+    Title = "CM"
+    Height = "1080"
+    Width = "1920"
+    WindowState = "Maximized"
+	WindowStyle = "None"
+	ResizeMode = "NoResize"
+    Loaded = "CM_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "Auto"/>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel 
+            Grid.Column = "0" 
+            Margin = "15">
+            <ListView
+            x:Name = "Buttons_Menu"/>
+        </StackPanel>
+        <StackPanel 
+            Grid.Column = "1" 
+            Margin = "15">
+            <ListView 
+                x:Name = "Libraryes_Text" 
+                ItemsSource = "{Binding}"/>
+            <ListView 
+                x:Name = "Namespace_Text" 
+                ItemsSource = "{Binding}"/>
+            <ListView 
+                x:Name = "Main_Function_1" 
+                ItemsSource = "{Binding}"/>
+            <ListView 
+                x:Name = "Main_Function_2" 
+                ItemsSource = "{Binding}"/>
+            <ListView 
+                x:Name = "Main_Function_Text" 
+                ItemsSource = "{Binding}"/>
+            <ListView 
+                x:Name = "Main_Function_3" 
+                ItemsSource = "{Binding}"/>
+            <ListView 
+                x:Name = "Main_Function_4" 
+                ItemsSource = "{Binding}"/>
+        </StackPanel>
+        <StackPanel 
+            Grid.Column = "2" 
+            Margin = "15">
+            <ListView
+                x:Name = "Buttons_Values"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "Auto"/>
+                    <ColumnDefinition Width = "Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    Grid.Column = "0">
+                    <TextBox
+                        Name = "Text_Box_1"
+                        Width = "150"
+                        MaxHeight = "30"
+                        />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column = "1">
+                    <TextBlock
+                        Name = "Text_Block_1"
+                        Width = "150"
+                        MaxHeight = "30"
+                        Text = "Название"
+                        />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
